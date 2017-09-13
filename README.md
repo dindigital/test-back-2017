@@ -17,14 +17,12 @@
 
 ### CONHECIMENTOS DESEJÁVEIS:
 
-- Wordpress
-- Javascript
+- Javascript Básico
 - Teste de Unidade / Integração
 - Noções de estruturação e configuração de servidores
 
 ### DIFERENCIAIS:
 
-- Wordpress Avançado
 - NodeJS
 
 ### BENEFÍCIOS
