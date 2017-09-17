@@ -219,63 +219,32 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 doctor-profile">
-                        <div class="bg-profile">
-                            <img src="images/team-3.png" alt="" />
+                    @foreach($doctors as $doctor)
+                        <div class="col-md-4 doctor-profile">
+                            <div class="bg-profile">
+                                <a href="{{ route('doctors.show', ['id' => $doctor->id]) }}">
+                                    <img src="{{ $doctor->photo }}" alt="{{ $doctor->name }}" />
+                                </a>
+                            </div>
+                            <h3>{{ $doctor->name }}</h3>
+                            <strong>{{ $doctor->specialty }} | {{ $doctor->phone }}</strong>
+                            <p>{{ $doctor->description }}</p>
+                            <div class="social">
+                                <a href="#">
+                                    <i class="fa fa-facebook-square fa-size"> </i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-linkedin-square fa-size"> </i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-twitter-square fa-size"> </i>
+                                </a>
+                            </div>
                         </div>
-                        <h3> Dr. Rodney Stratton </h3>
-                        <strong>Physiotherapist     |      (985) 123-3410 </strong>
-                        <p> Sed tristique turpis a libero malesuada, tincidunt elementum mauris euismod. </p>
-                        <div class="social">
-                            <a href="#">
-                                <i class="fa fa-facebook-square fa-size"> </i>
-                            </a>
-                            <a href="#">
-                                <i class="fa fa-linkedin-square fa-size"> </i>
-                            </a>
-                            <a href="#">
-                                <i class="fa fa-twitter-square fa-size"> </i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 doctor-profile">
-                        <div class="bg-profile">
-                            <img src="images/team-1.png" alt="" />
-                        </div>
-                        <h3> Robert Brown, Prof. </h3>
-                        <strong>Anesthesiologist    |    (985) 231-1234</strong>
-                        <p> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat </p>
-                        <div class="social">
-                            <a href="#">
-                                <i class="fa fa-facebook-square fa-size"> </i>
-                            </a>
-                            <a href="#">
-                                <i class="fa fa-linkedin-square fa-size"> </i>
-                            </a>
-                            <a href="#">
-                                <i class="fa fa-twitter-square fa-size"> </i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 doctor-profile">
-                        <div class="bg-profile">
-                            <img src="images/team-2.png" alt="" />
-                        </div>
-                        <h3> Dr. Lita White </h3>
-                        <strong> Neurosurgeon   |    (985) 231-1234</strong>
-                        <p> Maecenas commodo turpis adipiscing, malesuada ipsum in, molestie magna. </p>
-                        <div class="social">
-                            <a href="#">
-                                <i class="fa fa-facebook-square fa-size"> </i>
-                            </a>
-                            <a href="#">
-                                <i class="fa fa-linkedin-square fa-size"> </i>
-                            </a>
-                            <a href="#">
-                                <i class="fa fa-twitter-square fa-size"> </i>
-                            </a>
-                        </div>
-                    </div>
+                        @if(($loop->iteration % 3) == 0)
+                            <div class="clearfix"></div>
+                        @endif
+                    @endforeach
                 </div>
             </div>
             <div class="testimonials"><!-- Testimonials start -->
