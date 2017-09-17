@@ -15,3 +15,6 @@ Route::get('/', 'HomeController@index')->name('home');
 
 // Doctors
 Route::get('/doctors/{doctor}', 'DoctorsController@show')->name('doctors.show');
+
+// Leads
+Route::post('/appointment', 'LeadsController@store')->name('lead.store');

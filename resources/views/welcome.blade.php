@@ -129,18 +129,38 @@
                     <div class="col-md-offset-1 col-md-4">
                         <div class="appoinment-form">
                             <h3> Make an appointment today </h3>
-                            <form role="form" onSubmit="return send_email();">
-                                <div class="form-group">
-                                    <label for="exampleInputName">Name</label>
-                                    <input type="text" class="form-control" id="app_name" placeholder="Name" required>
+                            <form role="form" method="POST" action="{{ route('lead.store') }}">
+                                {{ csrf_field() }}
+
+                                <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
+                                    <label for="name" class="control-label">Name</label>
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Name" value="{{ old('name') }}" required />
+
+                                    @if ($errors->has('name'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('name') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">E-mail</label>
-                                    <input type="text" class="form-control" id="app_email" placeholder="E-mail" required>
+                                <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
+                                    <label for="email" class="control-label">E-mail</label>
+                                    <input type="text" name="email" class="form-control" id="email" placeholder="E-mail" value="{{ old('email') }}" required />
+
+                                    @if ($errors->has('email'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Phone</label>
-                                    <input type="text" class="form-control" id="app_phone" placeholder="Phone">
+                                <div class="form-group  {{ $errors->has('phone') ? 'has-error' : '' }}">
+                                    <label for="phone" class="control-label">Phone</label>
+                                    <input type="text" name="phone" class="form-control" id="phone" placeholder="Phone" value="{{ old('phone') }}" required />
+
+                                    @if ($errors->has('phone'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('phone') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                                 <button type="submit" class="btn btn-block btn-orange btn-Submit">SUBMIT</button>
                                 <small id="mail_msg"></small>
