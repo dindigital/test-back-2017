@@ -12,7 +12,7 @@ folders:
 sites:
     -
         map: homestead.app
-        to: /home/vagrant/Code/public
+        to: /home/vagrant/Code/test-back
 databases:
     - homestead
 name: test-back
