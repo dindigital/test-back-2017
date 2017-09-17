@@ -8,6 +8,11 @@ use Illuminate\Http\Response;
 class DoctorsController extends Controller
 {
 
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         $doctors = $this->model()->paginate();

@@ -8,11 +8,11 @@ keys:
 folders:
     -
         map: ./
-        to: /home/vagrant/Code
+        to: /home/vagrant/Code/test-back
 sites:
     -
         map: homestead.app
-        to: /home/vagrant/Code/test-back
+        to: /home/vagrant/Code/test-back/public
 databases:
     - homestead
 name: test-back

@@ -10,6 +10,11 @@ use Validator;
 
 class LeadsController extends Controller
 {
+     /**
+     * Store a newly created resource in storage.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function store()
     {
     	$data = request()->all();
@@ -40,6 +45,12 @@ class LeadsController extends Controller
         return view('appointments.success');
     }
 
+    /**
+    * Validate the Lead request
+    *
+    * @param array $data
+    * @return void
+    */
     private function validateLead(array $data)
     {
     	return Validator::make($data, [
@@ -49,6 +60,11 @@ class LeadsController extends Controller
     	]);
     }
 
+    /**
+     * Get the instance of the Lead model.
+     *
+     * @return App\Model\Lead
+     */
     private function model()
     {
     	return new Lead;
