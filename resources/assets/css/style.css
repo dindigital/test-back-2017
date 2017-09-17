@@ -7,9 +7,6 @@
  *
 */
 
-@import "owl.carousel.css";
-@import "owl.theme.css";
-
 /*--------------------
 	Layout
 
@@ -21,13 +18,13 @@
 						-testimonals
 						-client
 	==================================
-	
+
 	*Contact	/	#contact
 						-newsletter
 	==================================
-	
+
 	*Footer		/   #footer
-	
+
 ---------------------------------------------*/
 
 /*--------------------------------------------
@@ -38,7 +35,7 @@
 						 p : color:#72736e;
 						 a : color:#9bb649;
 				   a:hover : color:#034b81;
-				   
+
 --------------------------------------------------------*/
 
 /*--------------------------------------------------------
@@ -47,7 +44,7 @@
 	h1, h2, h3, h4, h5, h6 : font-family: 'Asap', sans-serif;
 						 p : font-family: 'Asap', sans-serif;
 					 ul li : font-family: 'Asap', sans-serif;
-				   
+
 --------------------------------------------------------*/
 
 @import url(http://fonts.googleapis.com/css?family=Asap:400,700);
@@ -59,7 +56,7 @@ body {
 	height: 100%;
 	font-family: 'Asap', sans-serif;
 	-webkit-font-smoothing: antialiased;
-	
+
 }
 html {
 	width: 100%;
@@ -97,12 +94,12 @@ ul li {
 	color:#72736e;
 }
 .green-icon {
-	
+
 	color:#9bb649;
 }
 .green-icon i{
 	margin-bottom:40px;
-	
+
 }
 .green-icon:hover{
 	margin-bottom:40px;
@@ -140,7 +137,7 @@ ul li {
 	background-color:#dc5520;
 }
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
-The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
 of those sections to manage the look and feel of the site. */
 
 /***************
@@ -192,7 +189,7 @@ background-color: #fff;
 }
 
 .social {
-	
+
 }
 .social a {
 	padding: 10px 5px!important;
@@ -457,7 +454,7 @@ transition: all 0.3s;}
 .social-icon {
 	font-size:24px;
 	color:#797c7e;
-	
+
 	margin-right: 15px;
 }
 .social-icon:hover {
@@ -600,4 +597,3 @@ margin-right: 15px;
 padding-bottom: 30px;
 }
 }
-
