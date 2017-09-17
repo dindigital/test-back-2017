@@ -18,3 +18,4 @@ Route::get('/doctors/{doctor}', 'DoctorsController@show')->name('doctors.show');
 
 // Leads
 Route::post('/appointment', 'LeadsController@store')->name('lead.store');
+Route::get('/appointment/success', 'LeadsController@success')->name('appointment.success');

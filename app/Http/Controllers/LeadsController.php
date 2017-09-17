@@ -35,6 +35,11 @@ class LeadsController extends Controller
     	return redirect()->with('error', 'Could not possibly make an appointment.');
     }
 
+    public function success()
+    {
+        return view('appointments.success');
+    }
+
     private function validateLead(array $data)
     {
     	return Validator::make($data, [
