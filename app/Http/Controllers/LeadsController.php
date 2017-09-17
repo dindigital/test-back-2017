@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\NewLeadRegistered;
 use App\Models\Lead;
 use Illuminate\Http\Request;
+use Mail;
 use Validator;
 
 class LeadsController extends Controller
@@ -25,7 +27,7 @@ class LeadsController extends Controller
     	$lead->fill($data);
 
     	if ($lead->save()) {
-    		// send email
+    		Mail::to('admin@wealth.life.com')->send(new NewLeadRegistered($lead));
 
     		return redirect()->route('appointment.success');
     	}
