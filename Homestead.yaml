@@ -1,0 +1,19 @@
+ip: 192.168.10.10
+memory: 2048
+cpus: 2
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: ./
+        to: /home/vagrant/Code
+sites:
+    -
+        map: homestead.app
+        to: /home/vagrant/Code/public
+databases:
+    - homestead
+name: test-back
+hostname: test-back
