@@ -1,0 +1,603 @@
+@charset "utf-8";
+
+
+/*
+ *Wealth.life landing page template
+ *Author : Jitu chauhan
+ *
+*/
+
+@import "owl.carousel.css";
+@import "owl.theme.css";
+
+/*--------------------
+	Layout
+
+	*Nav 		/ 	#nav
+	*Intro 		/	#intro
+	*About 		/	#about
+	*Services	/ 	#services
+	*Doctor 	/ 	#doctor
+						-testimonals
+						-client
+	==================================
+	
+	*Contact	/	#contact
+						-newsletter
+	==================================
+	
+	*Footer		/   #footer
+	
+---------------------------------------------*/
+
+/*--------------------------------------------
+	  COLOR
+	  			   primary : color:#f0f1ec;
+	  				  body :
+	h1, h2, h3, h4, h5, h6 : color:#034b81;
+						 p : color:#72736e;
+						 a : color:#9bb649;
+				   a:hover : color:#034b81;
+				   
+--------------------------------------------------------*/
+
+/*--------------------------------------------------------
+	  						FONT
+
+	h1, h2, h3, h4, h5, h6 : font-family: 'Asap', sans-serif;
+						 p : font-family: 'Asap', sans-serif;
+					 ul li : font-family: 'Asap', sans-serif;
+				   
+--------------------------------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Asap:400,700);
+/*--------------------
+	  general
+---------------------*/
+body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Asap', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	
+}
+html {
+	width: 100%;
+	height: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom:20px;
+	margin-top:0px;
+	color:#034b81;
+	font-family: 'Asap', sans-serif;
+	letter-spacing:-1px;
+}
+h1 {
+	font-size:32px;
+}
+h2 {
+	font-size:26px;
+}
+h3 {
+	font-size:20px;
+}
+p {
+	font-size:16px;
+	line-height:26px;
+	color:#72736e;
+	margin-bottom: 30px;
+}
+ul {
+	margin:0px;
+	padding:0px;
+}
+ul li {
+	line-height:26px;
+	color:#72736e;
+}
+.green-icon {
+	
+	color:#9bb649;
+}
+.green-icon i{
+	margin-bottom:40px;
+	
+}
+.green-icon:hover{
+	margin-bottom:40px;
+	color:#034b81;
+}
+.fa-size{
+	font-size:24px;
+}
+.block-title {
+	margin-bottom: 60px;
+	text-align: center;
+}
+.block {
+	margin-bottom:50px;
+}
+
+/*--------------------
+	  button
+---------------------*/
+
+.btn-orange {
+	background-color:#f1703d;
+	color:#fff;
+	padding:10px 23px;
+	font-size:18px;
+	border: none;
+	font-weight: 700;
+	letter-spacing: 1px;
+	-webkit-box-shadow: 0px 3px 0px 0px rgba(220, 85, 32, 0.9);
+	-moz-box-shadow:    0px 3px 0px 0px rgba(220, 85, 32, 0.9);
+	box-shadow:         0px 3px 0px 0px rgba(220, 85, 32, 0.9);
+}
+.btn-orange:hover {
+	color:#fff;
+	background-color:#dc5520;
+}
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
+of those sections to manage the look and feel of the site. */
+
+/***************
+	nav
+***************/
+.navbar-nav {
+	float: right;
+	margin: 0;
+}
+.navbar-default {
+	background-color: #f0f1ec;
+	border-bottom:1px solid #dfe1d8;
+}
+.navbar-brand {
+	float: left;
+	padding: 0px 0px 0px 15px;
+	font-size: 18px;
+	line-height: 20px;
+	height: 20px;
+}
+.navbar-default .navbar-nav>li>a {
+	color: #72736e;
+	font-size:17px;
+	-webkit-font-smoothing: antialiased;
+	float:left;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+	color: #034b81;
+	background-color: transparent;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	color: #fff;
+	background-color: #034b81;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+/**** Mobile menu *****/
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+background-color: #9bb649;
+border-color: #9bb649;
+}
+.navbar-default .navbar-toggle {
+border-color: #034b81;
+background-color: #034b81;
+}
+.navbar-default .navbar-toggle .icon-bar {
+background-color: #fff;
+}
+
+.social {
+	
+}
+.social a {
+	padding: 10px 5px!important;
+	margin-top:3px;
+	color: #72736e;
+}
+.social i:hover {
+	color:#034b81;
+}
+.logo {
+	font-family: 'Pacifico', cursive;
+	font-weight:400;
+	text-transform:lowercase;
+	color:#9bb649;
+}
+.logo-brand {
+	font-weight:700;
+}
+/***************
+	intro
+***************/
+.intro-section {
+	padding-top: 125px;
+	background: #f0f1ec;
+}
+.intro-caption {
+	margin-top:100px;
+}
+.intro-title {
+	font-size:48px;
+}
+.intro-title span {
+	color:#9bb649;
+}
+.call-num {
+	color:#afb0ad;
+	font-weight:700;
+	font-size:48px;
+}
+/***************
+	about
+***************/
+
+.about-section {
+	padding-top: 120px;
+	background: #fff;
+	padding-bottom:120px;
+}
+.about-section strong{
+	color:#f1703d;
+}
+.about-section .lead{
+	font-size:18px;
+	margin-bottom:75px;
+	line-height:27px;
+}
+.appoinment-form h3 {
+	margin-bottom:50px;
+}
+ul.appoinment li {
+	list-style:none;
+	font-size:16px;
+	margin-bottom:35px;
+}
+ul.appoinment li i {
+	margin-right:10px;
+}
+.appoinment strong {
+	color:#f1703d;
+}
+.appoinment-form {
+	padding: 30px 30px 30px 30px;
+	background-color:#f0f1ec;
+	border-radius:2px;
+	box-shadow: 0px 3px 0px 0px rgba(203, 205, 198, 0.9);
+}
+.appoinment-form form .form-group label {
+	font-size:16px;
+	font-weight:normal;
+	margin-bottom:5px;
+	color:#4c4d46;
+}
+.appoinment-form form .form-group input {
+	padding:15px 15px;
+	height: 45px;
+}
+.btn-Submit {
+	margin-top: 15px;
+	display: inline-block;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	font-size:16px;
+}
+/***************
+	services
+***************/
+
+.services-section {
+	padding-top: 120px;
+	background: #f9faf6;
+	padding-bottom:120px;
+}
+/*.feature-block {
+	text-align:center;
+	background-color:#333;
+	border-radius:100%;
+}
+*/
+/*.feature-block .green-icon:hover {
+	color:#034b81;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	cursor: pointer;
+}*/
+.box-ct{
+	margin-top:30px;
+}
+.box-icon{
+	height: 160px;
+	width: 160px;
+	-moz-border-radius: 35px;
+	border-radius: 100%;
+	padding: 55px;
+	background-color: #f0f1ec;
+	color: #034b81;
+	text-align: center;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	margin-right: 15px;
+}
+
+.box-icon:hover{
+	height: 160px;
+	width: 160px;
+	-moz-border-radius: 35px;
+	border-radius: 100%;
+	padding: 55px;
+	background-color: #9bb649;
+	color:#fff;
+	text-align: center;
+	cursor:pointer;
+}
+.block:hover .box-icon{
+	-moz-border-radius: 35px;
+	border-radius: 100%;
+	padding: 55px;
+	background-color: #9bb649;
+	color:#fff;
+	text-align: center;
+	cursor:pointer;
+}
+
+/***************
+	doctor
+***************/
+.doctor-section {
+	padding-top:120px;
+	padding-bottom:120px;
+}
+.doctor-profile {
+	margin-top:60px;
+
+}
+.doctor-profile img {
+	margin-top:-60px;
+	width: 100%;
+}
+.doctor-profile strong {
+	color:#9bb649;
+	margin-bottom:10px;
+	display:block;
+}
+
+.bg-profile{ background:#e8eae3; text-align: center; margin-bottom:20px; -webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;}
+.bg-profile:hover{ background-color:#9bb649; cursor:pointer;}
+.testimonials {
+	background-color:#f9faf6;
+	padding-top: 80px;
+	padding-bottom:80px;
+	margin-top: 120px;
+}
+.testimonials span {
+	color:#0e577d;
+	font-size:20px;
+}
+.testimonials span a {
+	color:#9bb649;
+	font-size:14px;
+}
+.client {
+	padding-top:80px;
+}
+.client-logo {
+	margin-top:30px;
+}
+.client-logo .item img {
+	opacity:0.5
+}
+.client-logo .item img:hover {
+	opacity:1;
+	cursor:pointer;
+}
+.client-circle {
+	padding: 8px;
+	background: #fff;
+	border: 1px solid #ebece8;
+}
+/****************
+	contact
+****************/
+
+.contact {
+	padding-top:120px;
+	padding-bottom:120px;
+	background-color:#f9faf6;
+}
+.ct-block {
+	padding-top: 80px;
+	margin-bottom: 80px;
+	padding-bottom:70px;
+	border-bottom: 1px solid #e4e6dd;
+	border-top: #e4e6dd solid 1px;
+	margin-top: 80px;
+}
+.ct-info {
+	text-align:center;
+}
+.ct-info h3 {
+	font-size:30px;
+	color:#72736e;
+}
+/****************
+	newsletter
+****************/
+
+.newsletter {
+	padding-top:60px;
+	padding-bottom:60px;
+}
+.newsletter .form-control {
+	height:48px;
+	border-radius: 0px;
+	border: 1px solid #c1c3bd;
+}
+.newsletter .btn-orange {
+	padding-left:20px;
+	padding-right:20px;
+	display: block;
+	font-weight:600;
+}
+/***************
+	footer
+***************/
+.footer {
+	background-color:#303335;
+}
+.social-icon {
+	font-size:24px;
+	color:#797c7e;
+	
+	margin-right: 15px;
+}
+.social-icon:hover {
+	color:#9bb649;
+}
+.ft p {
+	font-size:17px;
+	color:#797c7e;
+	margin-top:45px;
+}
+ @media(min-width:767px) {
+ .navbar {
+ padding: 20px 0;
+ -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+ -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+ transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
+ .top-nav-collapse {
+        /* Customize the look and feel of the collapsed top nav here */
+        padding: 0;
+}
+}
+
+@media(max-width:767px) {
+/****************
+	nav
+****************/
+
+.navbar-nav {
+float: left;
+margin: 0;
+}
+.logo-brand {
+font-weight: 700;
+font-size: 24px;
+margin-top: 12px;
+}
+/*******************
+	intro-section
+*******************/
+
+.intro-section {
+	background: #f0f1ec;
+	padding:0px;
+}
+.call-num {
+color: #afb0ad;
+font-weight: 700;
+font-size: 34px;
+}
+/********************
+	about-section
+********************/
+
+.about-section {
+padding-top: 60px;
+background: #fff;
+padding-bottom: 20px
+}
+.block {
+margin-bottom: 0px;
+}
+.box-ct{
+	text-align:center;
+}
+/****************
+	services
+****************/
+
+.services-section {
+padding-top: 60px;
+background: #f9faf6;
+padding-bottom: 20px;
+}
+.box-icon {
+height: 160px;
+width: 160px;
+-moz-border-radius: 35px;
+border-radius: 100%;
+padding: 55px;
+background-color: #f0f1ec;
+color: #034b81;
+text-align: center;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;
+margin: 0 auto;
+}
+/****************
+	doctor
+****************/
+
+.doctor-section {
+padding-top: 60px;
+padding-bottom: 20px;
+}
+/*******************
+	testimonals
+*******************/
+
+.testimonials {
+background-color: #f9faf6;
+padding-top: 50px;
+padding-bottom: 20px;
+margin-top: 30px;
+text-align:center;
+}
+/****************
+	contact
+****************/
+
+.contact {
+padding-top: 60px;
+padding-bottom: 20px;
+background-color: #f9faf6;
+}
+/****************
+	newsletter
+****************/
+
+.newsletter {
+padding-top: 60px;
+padding-bottom: 20px;
+}
+.newsletter .btn-orange {
+padding-left: 20px;
+padding-right: 20px;
+display: block;
+font-weight: 600;
+margin-top: 20px;
+}
+/****************
+	footer
+****************/
+
+.social-icon {
+font-size: 24px;
+color: #797c7e;
+margin-right: 15px;
+padding-bottom: 30px;
+}
+}
+
